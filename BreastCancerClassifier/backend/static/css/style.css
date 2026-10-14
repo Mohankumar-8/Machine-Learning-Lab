@@ -1,0 +1,31 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f3f6fb;color:#1f2937}
+header{background:linear-gradient(135deg,#be185d,#7c3aed);color:#fff;padding:26px 20px;text-align:center}
+header h1{margin:0 0 6px;font-size:1.6rem} header p{margin:0;opacity:.9}
+main{max-width:1050px;margin:22px auto;padding:0 14px}
+.card{background:#fff;border-radius:12px;padding:20px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.card h2{margin:0 0 14px;font-size:1.2rem;display:flex;align-items:center;gap:10px}
+.card h2 span{background:#7c3aed;color:#fff;width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.9rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+input{padding:8px 10px;border:1px solid #cbd5e1;border-radius:6px;font-size:.9rem}
+.row input{flex:1;min-width:200px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:16px}
+.grid label{font-size:.75rem;color:#475569;display:block;margin-bottom:3px;text-transform:capitalize}
+.grid input{width:100%}
+button{background:#7c3aed;color:#fff;border:0;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:.95rem}
+button:hover{background:#6d28d9} button.ghost{background:#e9e5ff;color:#4c1d95}
+.result{padding:18px;border-radius:10px;text-align:center}
+.result.benign{background:#dcfce7;border:2px solid #16a34a}
+.result.malignant{background:#fee2e2;border:2px solid #dc2626}
+.result h3{margin:0 0 6px;font-size:1.5rem}
+.bar{height:14px;border-radius:7px;background:#e5e7eb;overflow:hidden;margin:6px 0}
+.bar div{height:100%}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.stat{background:#f5f3ff;border-radius:10px;padding:14px;text-align:center}
+.stat b{display:block;font-size:1.5rem;color:#5b21b6}
+.imgs{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.imgs img{max-width:100%;height:240px;border:1px solid #e5e7eb;border-radius:8px}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.9rem}
+th,td{padding:8px;border-bottom:1px solid #e5e7eb;text-align:left}
+th{background:#f5f3ff}
+footer{text-align:center;color:#64748b;padding:14px;font-size:.85rem}

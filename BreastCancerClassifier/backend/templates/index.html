@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breast Cancer Classifier - MLP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+  <h1>Breast Cancer Detection using MLP Neural Network</h1>
+  <p>Wisconsin Diagnostic Breast Cancer (WDBC) &middot; Flask &middot; scikit-learn &middot; SQLite</p>
+</header>
+
+<main>
+  <section class="card" id="step1">
+    <h2><span>1</span> Enter Tumour Measurements</h2>
+    <div class="row">
+      <input id="label" placeholder="Patient / sample label (optional)">
+      <button class="ghost" onclick="loadSample('benign')">Load Benign Sample</button>
+      <button class="ghost" onclick="loadSample('malignant')">Load Malignant Sample</button>
+      <button class="ghost" onclick="clearForm()">Clear</button>
+    </div>
+    <div id="fields" class="grid"></div>
+    <button id="predictBtn" onclick="predict()">Analyze Sample</button>
+  </section>
+
+  <section class="card" id="step2" hidden>
+    <h2><span>2</span> Prediction Result</h2>
+    <div id="result"></div>
+  </section>
+
+  <section class="card" id="step3">
+    <h2><span>3</span> Model Performance (Test Set)</h2>
+    <div id="metrics" class="stats"></div>
+    <div class="imgs">
+      <img src="/outputs/training_curves.png" alt="Training curves">
+      <img src="/outputs/confusion_matrix.png" alt="Confusion matrix">
+      <img src="/outputs/roc_curve.png" alt="ROC curve">
+    </div>
+  </section>
+
+  <section class="card" id="step4">
+    <h2><span>4</span> Prediction History (SQLite)</h2>
+    <button class="ghost" onclick="clearHistory()">Clear History</button>
+    <table id="hist"><thead><tr><th>#</th><th>Label</th><th>Prediction</th><th>Confidence</th><th>Time</th></tr></thead><tbody></tbody></table>
+  </section>
+</main>
+<footer>Educational project - not a medical diagnostic tool.</footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
